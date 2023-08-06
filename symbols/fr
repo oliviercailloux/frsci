@@ -6,9 +6,9 @@ xkb_symbols "MiR" {
 
   include "level5(caps_switch)"
   key.type[Group1] = "EIGHT_LEVEL";
-  include "be(letters)"
-  include "be(1to0)"
-  include "be(keypad)"
+  include "fr(letters)"
+  include "fr(1to0)"
+  include "fr(keypad)"
 };
 
 partial
