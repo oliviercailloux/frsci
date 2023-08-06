@@ -6,7 +6,18 @@ xkb_symbols "MiR" {
   include "nbsp(level4n)"
   include "keypad(oss)"
 
-  include "level5(caps_switch)"
+// U21D2 ⇒ ; U21D4 ⇔
+// U2192 → ; U2194 ↔
+// U2283 ⊃
+// U2261 ≡ 
+// similarity relation?
+// 2227 ∧ ; 2228 ∨
+// 2295 ⊕ ; 2262 ≢
+// 00B7 · (MIDDLE DOT, point médian)
+// Mathematical Double-Struck Capital D 𝔻 and much more in Mathematical Alphanumeric Symbols
+// nabla
+// partial differential
+include "level5(caps_switch)"
   key.type[Group1] = "EIGHT_LEVEL";
   include "fr(letters)"
   include "fr(1to0)"
@@ -75,9 +86,9 @@ xkb_symbols "special" {
   key <BKSL> { [ asterisk, mu, dead_grave, dead_macron ] }; // * µ ` ̄
   key <LSGT> { [ less, greater, lessthanequal, greaterthanequal ] }; // < > ≤ ≥
   key <AB07> { [ comma, question, questiondown, U2026 ] }; // , ? ¿ …
-  key <AB08> { [ semicolon, period, multiply, U22C5 ] }; // ; . × ⋅
-  key <AB09> { [ colon, slash, division, U2215 ] }; // : / ÷ ∕
-  key <AB10> { [ exclam, section, exclamdown, U2212 ] }; // ! § ¡ −
+  key <AB08> { [ semicolon, period, multiply, U22C5 ] }; // ; . × ⋅ (Dot Operator)
+  key <AB09> { [ colon, slash, division, U2215 ] }; // : / ÷ ∕ (Division Slash)
+  key <AB10> { [ exclam, section, exclamdown, U2212 ] }; // ! § ¡ − (Minus Sign)
 };
 
 partial
