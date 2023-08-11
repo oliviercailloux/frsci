@@ -6,17 +6,6 @@ xkb_symbols "MiR" {
   include "nbsp(level4n)"
   include "keypad(oss)"
 
-// U21D2 ⇒ ; U21D4 ⇔
-// U2192 → ; U2194 ↔
-// U2283 ⊃
-// U2261 ≡ 
-// similarity relation?
-// 2227 ∧ ; 2228 ∨
-// 2295 ⊕ ; 2262 ≢
-// 00B7 · (MIDDLE DOT, point médian)
-// Mathematical Double-Struck Capital D 𝔻 and much more in Mathematical Alphanumeric Symbols
-// nabla
-// partial differential
 include "level5(caps_switch)"
   key.type[Group1] = "EIGHT_LEVEL";
   include "fr(letters)"
