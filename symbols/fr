@@ -7,7 +7,6 @@ xkb_symbols "MiR" {
   include "keypad(oss)"
   include "level5(caps_switch)"
 
-  key.type[Group1] = "EIGHT_LEVEL";
   include "fr(letters)"
   include "fr(1to0)"
   include "fr(special)"
