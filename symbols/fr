@@ -1,9 +1,9 @@
+// see /usr/include/X11/keysymdef.h
 partial alphanumeric_keys modifier_keys
 xkb_symbols "MiR" {
   name[Group1]= "MiRnamegroup1";
   include "latin"
   include "level3(ralt_switch)"
-  include "nbsp(level4n)"
   include "keypad(oss)"
   include "level5(caps_switch)"
 
@@ -65,6 +65,7 @@ xkb_symbols "1to0" {
 
 partial
 xkb_symbols "special" {
+  key.type[Group1] = "EIGHT_LEVEL";
   key <TLDE> { [ twosuperior, threesuperior, onesuperior, dead_cedilla ] }; // ² ³ ¹ ¸
   key <AE11> { [ parenright, degree, bracketright, notequal ] }; // ) ° ] ≠
   key <AE12> { [ equal, plus, braceright, plusminus ] }; // = + } ±
@@ -77,6 +78,7 @@ xkb_symbols "special" {
   key <AB08> { [ semicolon, period, multiply, U22C5 ] }; // ; . × ⋅ (Dot Operator)
   key <AB09> { [ colon, slash, division, U2215 ] }; // : / ÷ ∕ (Division Slash)
   key <AB10> { [ exclam, section, exclamdown, U2212 ] }; // ! § ¡ − (Minus Sign)
+  key <SPCE> { [ space, space, space, nobreakspace, space, U202F, NoSymbol, NoSymbol ] }; // ( nobreakspace is U+00A0 NO-BREAK SPACE ; U+202F is Narrow No-Break Space
 };
 
 partial
