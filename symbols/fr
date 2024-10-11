@@ -1,4 +1,3 @@
-// see /usr/include/X11/keysymdef.h
 partial alphanumeric_keys modifier_keys
 xkb_symbols "MiR" {
   name[Group1]= "MiRnamegroup1";
