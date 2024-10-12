@@ -37,29 +37,29 @@ xkb_symbols "MiR" {
   key <AB05> { [ b, B, downarrow, uparrow, U03B2, U0392 ] };
   key <AB06> { [ n, N, notsign, rightarrow, U03BD, U039D ] };
 
-  key <AE01> { [ ampersand, 1, dead_caron, dead_ogonek, U2170, U2160, U217D, U216D ] }; // & 1 ˇ ̨ ⅰ Ⅰ ⅽ Ⅽ
-  key <AE02> { [ eacute, 2, asciitilde, Eacute ] }; // é 2 ~ É
-  key <AE03> { [ quotedbl, 3, numbersign, dead_breve ] }; // " 3 # ˘
-  key <AE04> { [ apostrophe, 4, braceleft, U2014 ] }; // ' 4 { — (tiret cadratin)
-  key <AE05> { [ parenleft, 5, bracketleft, U2013, U2174, U2164, U217C, U216C ] }; // ( 5 [ – (tiret demi-cadratin) ⅴ Ⅴ ⅼ Ⅼ
-  key <AE06> { [ minus, 6, bar, U2011, U217E, U216E ] }; // - 6 | ‑ (tiret insécable) ⅾ Ⅾ
-  key <AE07> { [ egrave, 7, grave, Egrave ] }; // è 7 ` È
-  key <AE08> { [ underscore, 8, backslash, trademark ] }; // _ 8 \ ™
-  key <AE09> { [ ccedilla, 9, asciicircum, Ccedilla ] }; // ç 9 ^ Ç
-  key <AE10> { [ agrave, 0, at, Agrave, U2179, U2169, U217F, U216F ] }; // à 0 @ À ⅹ Ⅹ ⅿ Ⅿ
+  key <AE01> { [ ampersand, 1, dead_caron, dead_ogonek, U2170, U2160, U217D, U216D ] };
+  key <AE02> { [ eacute, 2, asciitilde, Eacute ] };
+  key <AE03> { [ quotedbl, 3, numbersign, dead_breve ] };
+  key <AE04> { [ apostrophe, 4, braceleft, U2014 ] };
+  key <AE05> { [ parenleft, 5, bracketleft, U2013, U2174, U2164, U217C, U216C ] };
+  key <AE06> { [ minus, 6, bar, U2011, U217E, U216E ] };
+  key <AE07> { [ egrave, 7, grave, Egrave ] };
+  key <AE08> { [ underscore, 8, backslash, trademark ] };
+  key <AE09> { [ ccedilla, 9, asciicircum, Ccedilla ] };
+  key <AE10> { [ agrave, 0, at, Agrave, U2179, U2169, U217F, U216F ] };
 
-  key <TLDE> { [ twosuperior, threesuperior, onesuperior, dead_cedilla ] }; // ² ³ ¹ ¸
-  key <AE11> { [ parenright, degree, bracketright, notequal ] }; // ) ° ] ≠
-  key <AE12> { [ equal, plus, braceright, plusminus ] }; // = + } ±
-  key <AD11> { [ dead_circumflex, dead_diaeresis, dead_tilde, dead_abovering ] }; // ^ " ~ ˚
-  key <AD12> { [ dollar, sterling, oslash, Ooblique ] }; // $ £ ø Ø
-  key <AC11> { [ ugrave, percent, dead_acute, Ugrave ] }; // ù % ' Ù
-  key <BKSL> { [ asterisk, mu, dead_grave, dead_macron ] }; // * µ ` ̄
-  key <LSGT> { [ less, greater, lessthanequal, greaterthanequal ] }; // < > ≤ ≥
-  key <AB07> { [ comma, question, questiondown, U2026 ] }; // , ? ¿ …
-  key <AB08> { [ semicolon, period, multiply, U22C5 ] }; // ; . × ⋅ (Dot Operator)
-  key <AB09> { [ colon, slash, division, U2215 ] }; // : / ÷ ∕ (Division Slash)
-  key <AB10> { [ exclam, section, exclamdown, U2212 ] }; // ! § ¡ − (Minus Sign)
+  key <TLDE> { [ twosuperior, threesuperior, onesuperior, dead_cedilla ] };
+  key <AE11> { [ parenright, degree, bracketright, notequal ] };
+  key <AE12> { [ equal, plus, braceright, plusminus ] };
+  key <AD11> { [ dead_circumflex, dead_diaeresis, dead_tilde, dead_abovering ] };
+  key <AD12> { [ dollar, sterling, oslash, Ooblique ] };
+  key <AC11> { [ ugrave, percent, dead_acute, Ugrave ] };
+  key <BKSL> { [ asterisk, mu, dead_grave, dead_macron ] };
+  key <LSGT> { [ less, greater, lessthanequal, greaterthanequal ] };
+  key <AB07> { [ comma, question, questiondown, U2026 ] };
+  key <AB08> { [ semicolon, period, multiply, U22C5 ] };
+  key <AB09> { [ colon, slash, division, U2215 ] };
+  key <AB10> { [ exclam, section, exclamdown, U2212 ] };
   key <SPCE> { [ space, space, space, nobreakspace, space, U202F, NoSymbol, NoSymbol ] }; 
 };
 
