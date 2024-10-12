@@ -4,10 +4,9 @@
   <layoutList>
     <layout>
       <configItem>
-        <name>fr</name>
-        <!-- Keyboard indicator for French layouts -->
-        <shortDescription>fr</shortDescription>
-        <description>French</description>
+        <name>mir</name>
+        <shortDescription>fr-MiR</shortDescription>
+        <description>French (MiR)</description>
         <countryList>
           <iso3166Id>FR</iso3166Id>
         </countryList>
@@ -15,15 +14,6 @@
           <iso639Id>fra</iso639Id>
         </languageList>
       </configItem>
-      <variantList>
-        <variant>
-          <configItem>
-            <name>mir</name>
-            <shortDescription>fr-MiR</shortDescription>
-            <description>French (MiR)</description>
-          </configItem>
-        </variant>
-      </variantList>
     </layout>
   </layoutList>
 </xkbConfigRegistry>
