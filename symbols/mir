@@ -19,7 +19,7 @@ xkb_symbols "MiR" {
   key <AD07> { [ u, U, ucircumflex, Ucircumflex, U03C5, U03A5 ] };
   key <AD08> { [ i, I, icircumflex, Icircumflex, U03B9, U0399] };
   key <AD09> { [ o, O, oe, OE, U03BF, U039F ] };
-  key <AD10> { [ p, P, ocircumflex, Ocircumflex, U03C0, U03A0, U03C0, U03A0 ] };
+  key <AD10> { [ p, P, ocircumflex, Ocircumflex, U03C0, U03A0 ] };
   key <AC01> { [ q, Q, adiaeresis, Adiaeresis, U03B8, U0398 ] };
   key <AC02> { [ s, S, ssharp, doublelowquotemark, U03C3, U03A3, U03C2 ] };
   key <AC03> { [ d, D, ediaeresis, Ediaeresis, U03B4, U0394 ] };
