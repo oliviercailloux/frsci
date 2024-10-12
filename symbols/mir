@@ -60,6 +60,6 @@ xkb_symbols "MiR" {
   key <AB08> { [ semicolon, period, multiply, U22C5 ] };
   key <AB09> { [ colon, slash, division, U2215 ] };
   key <AB10> { [ exclam, section, exclamdown, U2212 ] };
-  key <SPCE> { [ space, space, space, nobreakspace, space, U202F, NoSymbol, NoSymbol ] }; 
+  key <SPCE> { [ space, space, space, nobreakspace ] }; 
 };
 
