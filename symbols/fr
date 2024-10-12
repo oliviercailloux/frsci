@@ -1,143 +1,63 @@
 partial alphanumeric_keys modifier_keys
-xkb_symbols "MiR" {
+xkb_symbols "mir" {
   name[Group1]= "MiRnamegroup1";
-  include "latin"
-  include "level3(ralt_switch)"
-  include "keypad(oss)"
-  include "level5(caps_switch)"
+    key.type[Group1] = "ONE_LEVEL";
+    key <TAB> { [ Escape ] };
+    key <CAPS> { [ Tab ] };
+    key <AC11> { [ ISO_Level3_Shift ] }; // Sym Modifier
+    key <AB10> { [ ISO_Level5_Shift ] }; // Cur/Num Modifier
+    modifier_map Mod3 { <AB10> };
+    // Top row numbers - not part of spec, but given for convenience
+    key <AE01> { [ 1 ] };
+    key <AE02> { [ 2 ] };
+    key <AE03> { [ 3 ] };
+    key <AE04> { [ 4 ] };
+    key <AE05> { [ 5 ] };
+    key <AE06> { [ 6 ] };
+    key <AE07> { [ 7 ] };
+    key <AE08> { [ 8 ] };
+    key <AE09> { [ 9 ] };
+    key <AE10> { [ 0 ] };
 
-  include "fr(letters)"
-  include "fr(1to0)"
-  include "fr(special)"
-  include "fr(keypad)"
+    // Main keys
+    // Order of mods (defined by EIGHT_LEVEL_SEMIALPHABETIC) is:
+    //           [ None,      Shift,     Sym,          Shift+Sym,      Num,       Shift+Num,  Sym+Num,  Shift+Sym+Num ]
+    key.type[Group1] = "EIGHT_LEVEL_SEMIALPHABETIC";
+
+    // Second row
+    key <AD01> { [ q,         Q,         quotedbl,     Greek_omicron,  Prior,     Prior,      U21CD,    Greek_OMICRON ] };
+    key <AD02> { [ f,         F,         underscore,   Greek_phi,      BackSpace, BackSpace,  U21A4,    Greek_PHI ] };
+    key <AD03> { [ u,         U,         bracketleft,  Greek_upsilon,  Up,        Up,         U2191,    Greek_UPSILON ] };
+    key <AD04> { [ y,         Y,         bracketright, Greek_psi,      Delete,    Delete,     U21A6,    Greek_PSI ] };
+    key <AD05> { [ z,         Z,         asciicircum,  Greek_zeta,     Next,      Next,       U21CF,    Greek_ZETA ] };
+    key <AD06> { [ x,         X,         exclam,       Greek_xi,       NoSymbol,  NoSymbol,   U2260,    Greek_XI ] };
+    key <AD07> { [ k,         K,         less,         Greek_kappa,    1,         A,          U2A7D,    Greek_KAPPA ] };
+    key <AD08> { [ c,         C,         greater,      Greek_chi,      2,         B,          U2A7E,    Greek_CHI ] };
+    key <AD09> { [ w,         W,         equal,        Greek_omega,    3,         C,          U2261,    Greek_OMEGA ] };
+    key <AD10> { [ b,         B,         ampersand,    Greek_beta,     NoSymbol,  NoSymbol,   U2248,    Greek_BETA ] };
+
+    // Home row
+    key <AC01> { [ o,         O,         slash,        Greek_omega,    Home,      Home,       U21D0,    Greek_OMEGA ] };
+    key <AC02> { [ h,         H,         minus,        Greek_theta,    Left,      Left,       U2190,    Greek_THETA ] };
+    key <AC03> { [ e,         E,         braceleft,    Greek_epsilon,  Down,      Down,       U2193,    Greek_EPSILON ] };
+    key <AC04> { [ a,         A,         braceright,   Greek_alpha,    Right,     Right,      U2192,    Greek_ALPHA ] };
+    key <AC05> { [ i,         I,         asterisk,     Greek_iota,     End,       End,        U21D2,    Greek_IOTA ] };
+    key <AC06> { [ d,         D,         question,     Greek_delta,    period,    colon,      U2286,    Greek_DELTA ] };
+    key <AC07> { [ r,         R,         parenleft,    Greek_rho,      4,         D,          U2227,    Greek_RHO ] };
+    key <AC08> { [ t,         T,         parenright,   Greek_tau,      5,         E,          U2228,    Greek_TAU ] };
+    key <AC09> { [ n,         N,         apostrophe,   Greek_eta,      6,         F,          U2200,    Greek_ETA ] };
+    key <AC10> { [ s,         S,         colon,        Greek_sigma,    NoSymbol,  NoSymbol,   U2203,    Greek_SIGMA ] };
+
+    // Bottom row
+    key <AB01> { [ comma,     comma,     numbersign,   NoSymbol,       slash,     NoSymbol,   U21AE,    NoSymbol ] };
+    key <AB02> { [ m,         M,         dollar,       Greek_mu,       asterisk,  NoSymbol,   U2194,    Greek_MU ] };
+    key <AB03> { [ period,    period,    bar,          NoSymbol,       minus,     NoSymbol,   U21CE,    NoSymbol ] };
+    key <AB04> { [ j,         J,         asciitilde,   Greek_SIGMA,    plus,      NoSymbol,   U21D4,    NoSymbol ] };
+    key <AB05> { [ semicolon, semicolon, grave,        NoSymbol,       comma,     NoSymbol,   U2282,    NoSymbol ] };
+    key <AB06> { [ g,         G,         plus,         Greek_gamma,    0,         NoSymbol,   U2229,    Greek_GAMMA ] };
+    key <AB07> { [ l,         L,         percent,      Greek_lambda,   7,         parenleft,  U222A,    Greek_LAMBDA ] };
+    key <AB08> { [ p,         P,         backslash,    Greek_pi,       8,         parenright, U2208,    Greek_PI ] };
+    key <AB09> { [ v,         V,         at,           Greek_nu,       9,         NoSymbol,   U2209,    Greek_NU ] };
+
+    include "level5(modifier_mapping)"
 };
-
-partial
-xkb_symbols "letters" {
-// The U03B1 to U03C9 Unicode range contains the 24 small letters of the https://en.wikipedia.org/wiki/Greek_alphabet plus an alternate glyph for sigma.
-// The U0391 to U03A9 Unicode range minus U03A2 contains the 24 capital letters of the Greek alphabet.
-// We use the Beta code as it is the only code listed on the page https://en.wikipedia.org/wiki/Romanization_of_Greek that is a injection from the 24 letters of the Greek alphabet to the ASCII alphabet.
-// To make it a bijection, we consider the usual 24 letters (using the unicode ranges described here above for small and capital letters), and add to it U03DD, ϝ, and U03DC, Ϝ, the small and capital digamma, following the Beta code, and U03F2, ϲ and U03F9, Ϲ, the small and capital Lunate Sigma that we map to j, the unexploited letter in the Beta code.
-  key.type[Group1] = "EIGHT_LEVEL";
-  key <AD01> { [ a, A, ae, AE, U03B1, U0391 ] };
-  key <AD02> { [ z, Z, acircumflex, Acircumflex, U03B6, U0396 ] };
-  key <AD03> { [ e, E, EuroSign, cent, U03B5, U0395 ] };
-  key <AD04> { [ r, R, ecircumflex, Ecircumflex, U03C1, U03A1 ] };
-  key <AD05> { [ t, T, thorn, THORN, U03C4, U03A4 ] };
-  key <AD06> { [ y, Y, ydiaeresis, Ydiaeresis, U03C8, U03A8 ] };
-  key <AD07> { [ u, U, ucircumflex, Ucircumflex, U03C5, U03A5 ] };
-  key <AD08> { [ i, I, icircumflex, Icircumflex, U03B9, U0399] };
-  key <AD09> { [ o, O, oe, OE, U03BF, U039F ] };
-  key <AD10> { [ p, P, ocircumflex, Ocircumflex, U03C0, U03A0, U03C0, U03A0 ] };
-  key <AC01> { [ q, Q, adiaeresis, Adiaeresis, U03B8, U0398 ] };
-  key <AC02> { [ s, S, ssharp, doublelowquotemark, U03C3, U03A3, U03C2 ] };
-  key <AC03> { [ d, D, ediaeresis, Ediaeresis, U03B4, U0394 ] };
-  key <AC04> { [ f, F, leftsinglequotemark, singlelowquotemark, U03C6, U03A6 ] };
-  key <AC05> { [ g, G, rightsinglequotemark, yen, U03B3, U03A3 ] };
-  key <AC06> { [ h, H, eth, ETH, U03B7, U0397 ] };
-  key <AC07> { [ j, J, udiaeresis, Udiaeresis, U03F2, U03F9 ] };
-  key <AC08> { [ k, K, idiaeresis, Idiaeresis, U03BA, U039A ] };
-  key <AC09> { [ l, L, U0140, U013F, U03BB, U039B ] };
-  key <AC10> { [ m, M, odiaeresis, Odiaeresis, U03BC, U039C ] };
-  key <AB01> { [ w, W, guillemotleft, leftdoublequotemark, U03C9, U03A9 ] };
-  key <AB02> { [ x, X, guillemotright, rightdoublequotemark, U03C7, U03A7 ] };
-  key <AB03> { [ c, C, copyright, registered, U03BE, U039E ] };
-  key <AB04> { [ v, V, U202F, leftarrow, U03DD, U03DC ] };
-  key <AB05> { [ b, B, downarrow, uparrow, U03B2, U0392 ] };
-  key <AB06> { [ n, N, notsign, rightarrow, U03BD, U039D ] };
-};
-
-partial
-xkb_symbols "1to0" {
-  key.type[Group1] = "EIGHT_LEVEL";
-  key <AE01> { [ ampersand, 1, dead_caron, dead_ogonek, U2170, U2160, U217D, U216D ] }; // & 1 ˇ ̨ ⅰ Ⅰ ⅽ Ⅽ
-  key <AE02> { [ eacute, 2, asciitilde, Eacute ] }; // é 2 ~ É
-  key <AE03> { [ quotedbl, 3, numbersign, dead_breve ] }; // " 3 # ˘
-  key <AE04> { [ apostrophe, 4, braceleft, U2014 ] }; // ' 4 { — (tiret cadratin)
-  key <AE05> { [ parenleft, 5, bracketleft, U2013, U2174, U2164, U217C, U216C ] }; // ( 5 [ – (tiret demi-cadratin) ⅴ Ⅴ ⅼ Ⅼ
-  key <AE06> { [ minus, 6, bar, U2011, U217E, U216E ] }; // - 6 | ‑ (tiret insécable) ⅾ Ⅾ
-  key <AE07> { [ egrave, 7, grave, Egrave ] }; // è 7 ` È
-  key <AE08> { [ underscore, 8, backslash, trademark ] }; // _ 8 \ ™
-  key <AE09> { [ ccedilla, 9, asciicircum, Ccedilla ] }; // ç 9 ^ Ç
-  key <AE10> { [ agrave, 0, at, Agrave, U2179, U2169, U217F, U216F ] }; // à 0 @ À ⅹ Ⅹ ⅿ Ⅿ
-};
-
-partial
-xkb_symbols "special" {
-  key.type[Group1] = "EIGHT_LEVEL";
-  key <TLDE> { [ twosuperior, threesuperior, onesuperior, dead_cedilla ] }; // ² ³ ¹ ¸
-  key <AE11> { [ parenright, degree, bracketright, notequal ] }; // ) ° ] ≠
-  key <AE12> { [ equal, plus, braceright, plusminus ] }; // = + } ±
-  key <AD11> { [ dead_circumflex, dead_diaeresis, dead_tilde, dead_abovering ] }; // ^ " ~ ˚
-  key <AD12> { [ dollar, sterling, oslash, Ooblique ] }; // $ £ ø Ø
-  key <AC11> { [ ugrave, percent, dead_acute, Ugrave ] }; // ù % ' Ù
-  key <BKSL> { [ asterisk, mu, dead_grave, dead_macron ] }; // * µ ` ̄
-  key <LSGT> { [ less, greater, lessthanequal, greaterthanequal ] }; // < > ≤ ≥
-  key <AB07> { [ comma, question, questiondown, U2026 ] }; // , ? ¿ …
-  key <AB08> { [ semicolon, period, multiply, U22C5 ] }; // ; . × ⋅ (Dot Operator)
-  key <AB09> { [ colon, slash, division, U2215 ] }; // : / ÷ ∕ (Division Slash)
-  key <AB10> { [ exclam, section, exclamdown, U2212 ] }; // ! § ¡ − (Minus Sign)
-  key <SPCE> { [ space, space, space, nobreakspace, space, U202F, NoSymbol, NoSymbol ] }; // ( nobreakspace is U+00A0 NO-BREAK SPACE ; U+202F is Narrow No-Break Space
-};
-
-partial
-xkb_symbols "keypad" {
-  key <NMLK> { [a, b, c, d, e, f, g, h] };
-//  key <KPAD> {
-//  // ∫, ∪, ∬, ⊕ Circled Plus
-//  symbols[Group1] = [ U222B, U222A, U222C, U2295, i, j, k, l ]
-//  };
-  key <KPSU> {
-  // −, ∩, ¬, ⊖
-  symbols[Group1] = [ U2212, U2229, U00AC, U2296 ]
-  };
-  key <KPMU> {
-  // ×, ⋅ Dot Operator, ∨, ⊗
-  symbols[Group1] = [ U00D7, U22C5, U2228, U2297 ]
-  };
-  key <KPDV> {
-  // ∕ Division Slash, ÷, ∧, ⊘
-  symbols[Group1] = [ U2215, U00F7, U2227, U2298 ]
-  };
-  key <KP0> {
-  // α, Α, ↙, ⇙
-  symbols[Group1] = [ U03B1, U0391, U2199, U21D9 ]
-  };
-  key <KP1> {
-  // α, Α, ↙, ⇙
-  symbols[Group1] = [ U03B1, U0391, U2199, U21D9 ]
-  };
-  key <KP2> {
-  // α, Α, ↙, ⇙
-  symbols[Group1] = [ U03B1, U0391, U2199, U21D9 ]
-  };
-  key <KP3> {
-  // α, Α, ↙, ⇙
-  symbols[Group1] = [ U03B1, U0391, U2199, U21D9 ]
-  };
-  key <KP4> {
-  // α, Α, ↙, ⇙
-  symbols[Group1] = [ U03B1, U0391, U2199, U21D9 ]
-  };
-  key <KP5> {
-  // α, Α, ↙, ⇙
-  symbols[Group1] = [ U03B1, U0391, U2199, U21D9 ]
-  };
-  key <KP6> {
-  // α, Α, ↙, ⇙
-  symbols[Group1] = [ U03B1, U0391, U2199, U21D9 ]
-  };
-  key <KP7> {
-  // α, Α, ↙, ⇙
-  symbols[Group1] = [ U03B1, U0391, U2199, U21D9 ]
-  };
-  key <KP8> {
-  // α, Α, ↙, ⇙
-  symbols[Group1] = [ U03B1, U0391, U2199, U21D9 ]
-  };
-  key <KP9> {
-  // α, Α, ↙, ⇙
-  symbols[Group1] = [ U03B1, U0391, U2199, U21D9 ]
-  };
-};
-
