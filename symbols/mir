@@ -4,6 +4,7 @@ xkb_symbols "MiR" {
   include "level3(ralt_switch)"
   include "level5(caps_switch)"
   include "keypad(oss)"
+  include "mir(pres)"
 
   key.type[Group1] = "EIGHT_LEVEL";
 // The U03B1 to U03C9 Unicode range contains the 24 small letters of the https://en.wikipedia.org/wiki/Greek_alphabet plus an alternate glyph for sigma.
@@ -53,7 +54,6 @@ xkb_symbols "MiR" {
   key <AE12> { [ equal, plus, braceright, plusminus ] };
   key <AD11> { [ dead_circumflex, dead_diaeresis, dead_tilde, dead_abovering ] };
   key <AD12> { [ dollar, sterling, oslash, Ooblique ] };
-  key <AC11> { [ ugrave, percent, dead_acute, Ugrave ] };
   key <BKSL> { [ asterisk, mu, dead_grave, dead_macron ] };
   key <LSGT> { [ less, greater, lessthanequal, greaterthanequal ] };
   key <AB07> { [ comma, question, questiondown, U2026 ] };
@@ -63,3 +63,9 @@ xkb_symbols "MiR" {
   key <SPCE> { [ space, space, space, nobreakspace ] }; 
 };
 
+  
+partial alphanumeric_keys modifier_keys
+xkb_symbols "pres" {
+  key.type[Group1] = "EIGHT_LEVEL_PRES";
+  key <AC11> { [ Home, Home, a, A, ugrave, percent, dead_acute, Ugrave ] };
+};
