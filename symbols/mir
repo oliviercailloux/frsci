@@ -60,6 +60,6 @@ xkb_symbols "MiR" {
   
   //key <DELE> { [ Home ] };
   //key <PAUS> { [ Home ] };
-  key <INS> { [ Home, Home ] };
-  
+  key.type[Group1] = "ONE_LEVEL";
+  key <INS> { [ Home ] };
 };
