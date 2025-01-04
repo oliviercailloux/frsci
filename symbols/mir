@@ -6,10 +6,6 @@ xkb_symbols "MiR" {
   include "keypad(oss)"
 
   key.type[Group1] = "EIGHT_LEVEL";
-// The U03B1 to U03C9 Unicode range contains the 24 small letters of the https://en.wikipedia.org/wiki/Greek_alphabet plus an alternate glyph for sigma.
-// The U0391 to U03A9 Unicode range minus U03A2 contains the 24 capital letters of the Greek alphabet.
-// We use the Beta code as it is the only code listed on the page https://en.wikipedia.org/wiki/Romanization_of_Greek that is a injection from the 24 letters of the Greek alphabet to the ASCII alphabet.
-// To make it a bijection, we consider the usual 24 letters (using the unicode ranges described here above for small and capital letters), and add to it U03DD, ϝ, and U03DC, Ϝ, the small and capital digamma, following the Beta code, and U03F2, ϲ and U03F9, Ϲ, the small and capital Lunate Sigma that we map to j, the unexploited letter in the Beta code.
   key <AD01> { [ a, A, ae, AE, U03B1, U0391 ] };
   key <AD02> { [ z, Z, acircumflex, Acircumflex, U03B6, U0396 ] };
   key <AD03> { [ e, E, EuroSign, cent, U03B5, U0395 ] };
