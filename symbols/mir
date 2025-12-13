@@ -4,7 +4,7 @@ xkb_symbols "MiR" {
   include "level5(caps_switch)"
   include "keypad(oss)"
 
-  key.type[Group1] = "EIGHT_LEVEL";
+  key.type = "EIGHT_LEVEL";
   key <AD01> { [ a, A, ae, AE, U03B1, U0391, U2200, U226A ] };
   key <AD02> { [ z, Z, acircumflex, Acircumflex, U03B6, U0396, U2124, U226B ] };
   key <AD03> { [ e, E, EuroSign, cent, U03B5, U0395, U2203, U2204 ] };
@@ -57,6 +57,6 @@ xkb_symbols "MiR" {
   key <AB10> { [ exclam, section, exclamdown, U2212, U228A, U228B, U2286, U2287 ] };
   key <SPCE> { [ space, space, nobreakspace, nobreakspace ] };
   
-  key.type[Group1] = "ONE_LEVEL";
+  key.type = "ONE_LEVEL";
   key <INS> { [ Home ] };
 };
