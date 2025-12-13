@@ -1,6 +1,5 @@
 default partial alphanumeric_keys modifier_keys
 xkb_symbols "MiR" {
-  name[Group1]= "MiRnamegroup1";
   include "level3(ralt_switch)"
   include "level5(caps_switch)"
   include "keypad(oss)"
