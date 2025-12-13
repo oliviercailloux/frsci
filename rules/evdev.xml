@@ -6,9 +6,8 @@
   <layoutList>
     <layout>
       <configItem>
-        <name>mir</name>
-        <shortDescription>fr-MiR</shortDescription>
-        <description>French (MiR)</description>
+        <name>frsci</name>
+        <description>French science</description>
         <countryList>
           <iso3166Id>FR</iso3166Id>
         </countryList>
