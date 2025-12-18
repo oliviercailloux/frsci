@@ -1,0 +1,47 @@
+= French science keyboard layout
+
+An XKB keyboard layout for people who want a French keyboard layout with supplements for mathematics.
+
+Named by reference to old discussions with a friend about the “French way” of “doing science”…
+
+== Overview
+[[Visual layout]]
+image::https://github.com/oliviercailloux/mykbd/blob/main/Elite%20K70%20French.svg[opts=inline]
+
+Each key has up to eight symbols on it. Number the symbols mentally from 1 to 8, starting from the bottom left, then going top, then further right back to the bottom, and so on.
+Pressing just a key triggers the symbol number 1. Holding Shift while pressing the key adds one to the symbol number; holding AltGr adds two; holding CapsLock adds four.
+
+Consider the W key as an example: symbols from 1 to 8 are _w_, _W_, _«_, _»_, _ω_, _Ω_, _⊀_, _⊁_.
+Thus, pressing that key alone produces _w_; holding Shift produces _W_; holding AltGr produces _«_; holding both Shift and AltGr produces _»_; holding just CapsLock produces _ω_; holding both CapsLock and Shift produces _Ω_; holding both CapsLock and AltGr produces _⊀_; holding CapsLock, Shift, and AltGr produces _⊁_.
+
+That’s because the file `symbols/frsci` in this repository registers AltGr as level3 modifier, and CapsLock as level5 modifier, you can change this.
+
+== Install
+Here is how to install the layout system-wide.
+
+* Clone this repository
+* Tweak the file `symbols/frsci` to your own liking (at the minimum you probably want to remove the line where I remapped my Insert key to a Home key, which is due to my physical keyboard layout)
+* Edit the name of the layout in `rules/evdev.xml` (optional but please do this if you plan to redistribute your modified layout)
+* Check that you do not have current XKB configuration files in `/etc/xkb/`
+* `sudo install -D -m "u=rwX,g=rX,o=rX" "rules/evdev.xml" "/etc/xkb/rules/evdev.xml"`
+* `sudo install -D -m "u=rwX,g=rX,o=rX" "symbols/frsci" "/etc/xkb/symbols/frsci"`
+* On my system I had to reboot
+* The new layout should appear in your desktop environment keyboard settings as “French science”
+
+You can also install it as a user-specific layout. 
+
+== Rationale
+For compatibility, I started with the standard XKB French Unicode layout (`fr(oss)`) and kept all the symbols there, only adding more symbols.
+
+=== Greek to ASCII alphabet
+* The U03B1 to U03C9 Unicode range contains the 24 small letters of the https://en.wikipedia.org/wiki/Greek_alphabet plus an alternate glyph for sigma.
+* The U0391 to U03A9 Unicode range minus U03A2 contains the 24 capital letters of the Greek alphabet.
+* This layout uses the Beta code as it is the only code listed on the https://en.wikipedia.org/wiki/Romanization_of_Greek[Romanization of Greek] page that is a injection from the 24 letters of the Greek alphabet to the ASCII alphabet.
+* To make it a bijection with the French alphabet, we consider the usual 24 letters (using the unicode ranges described above for small and capital letters) and add to it U03DD, ϝ, and U03DC, Ϝ, the small and capital digamma, following the Beta code, and U03F2, ϲ and U03F9, Ϲ, the small and capital Lunate Sigma that we map to j, the unused letter in the Beta code.
+
+=== Other idiosyncratic choices
+The reason for the duplicate _É_ is that my keyboard refuses (by https://en.wikipedia.org/wiki/Key_rollover#Ghosting[hardware limitation]) to send a signal when pressing 2 while holding Shift and AltGr.
+
+== References
+* See https://who-t.blogspot.com/2020/09/user-specific-xkb-configuration-putting.html[this nice post] for documentation (about user-specific layouts and more).
+* The drawing above has been produced with https://github.com/oliviercailloux/mykbd[this library], resulting in an https://github.com/oliviercailloux/SVG-keyboard/blob/main/README.adoc[SVG keyboard file].
