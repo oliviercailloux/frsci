@@ -6,7 +6,7 @@ Named by reference to old discussions with a friend about the “French way” o
 
 == Overview
 [[Visual layout]]
-image::https://raw.githubusercontent.com/oliviercailloux/mykbd/main/Elite%20K70%20French.svg
+image::Elite%20K70%20French.svg[opts=inline]
 
 Each key has up to eight symbols on it. Number the symbols mentally from 1 to 8, starting from the bottom left, then going top, then further right back to the bottom, and so on.
 Pressing just a key triggers the symbol number 1. Holding Shift while pressing the key adds one to the symbol number; holding AltGr adds two; holding CapsLock adds four.
