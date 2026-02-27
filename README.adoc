@@ -10,6 +10,9 @@ Attempt.
 [[Visual layout]]
 image::https://github.com/oliviercailloux/mykbd/blob/main/Elite%20K70%20French.svg[opts=inline]
 
+[[Visual layout PNG]]
+image::https://github.com/oliviercailloux/mykbd/blob/main/Elite.png[opts=inline]
+
 [[Visual layout]]
 image::Elite%20K70%20French.svg[opts=inline]
 
