@@ -19,8 +19,6 @@ image::Elite%20K70%20French.svg[opts=inline]
 [[Unlabeled]]
 image::https://github.com/oliviercailloux/Keyboardd/blob/main/src/test/resources/io/github/oliviercailloux/keyboardd/thekey/The%20Key.svg[opts=inline]
 
-.The SVG keyboard with layout
-[#elitesvg]
 image::Elite%20K70%20French.svg[SVG keyboard]
 
 Each key has up to eight symbols on it. Number the symbols mentally from 1 to 8, starting from the bottom left, then going top, then further right back to the bottom, and so on.
