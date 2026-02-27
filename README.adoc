@@ -6,6 +6,9 @@ Named by reference to old discussions with a friend about the “French way” o
 
 == Overview
 [[Visual layout]]
+image::https://github.com/oliviercailloux/mykbd/blob/main/Elite%20K70%20French.svg[opts=inline]
+
+[[Visual layout]]
 image::Elite%20K70%20French.svg[opts=inline]
 
 [[Unlabeled]]
