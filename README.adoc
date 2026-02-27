@@ -5,6 +5,8 @@ An XKB keyboard layout for people who want a French keyboard layout with supplem
 Named by reference to old discussions with a friend about the “French way” of “doing science”…
 
 == Overview
+Attempt.
+
 [[Visual layout]]
 image::https://github.com/oliviercailloux/mykbd/blob/main/Elite%20K70%20French.svg[opts=inline]
 
