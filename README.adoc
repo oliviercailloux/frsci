@@ -7,7 +7,6 @@ Named by reference to old discussions with a friend about the “French way” o
 == Overview
 Attempt.
 
-[[Visual layout]]
 image::https://github.com/oliviercailloux/mykbd/blob/main/Elite%20K70%20French.svg[SVG keyboard]
 
 [[Visual layout PNG]]
