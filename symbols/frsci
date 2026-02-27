@@ -57,6 +57,5 @@ xkb_symbols "basic" {
   key <AB10> { [ exclam, section, exclamdown, U2212, U228A, U228B, U2286, U2287 ] };
   key <SPCE> { [ space, space, nobreakspace, nobreakspace ] };
   
-  key.type = "ONE_LEVEL";
   key <INS> { [ Home ] };
 };
