@@ -8,7 +8,7 @@ Named by reference to old discussions with a friend about the “French way” o
 Attempt.
 
 [[Visual layout]]
-image::https://github.com/oliviercailloux/mykbd/blob/main/Elite%20K70%20French.svg[opts=inline]
+image::https://github.com/oliviercailloux/mykbd/blob/main/Elite%20K70%20French.svg[SVG keyboard]
 
 [[Visual layout PNG]]
 image::https://github.com/oliviercailloux/mykbd/blob/main/Elite.png[opts=inline]
