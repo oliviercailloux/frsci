@@ -5,20 +5,7 @@ An XKB keyboard layout for people who want a French keyboard layout with supplem
 Named by reference to old discussions with a friend about the “French way” of “doing science”…
 
 == Overview
-Attempt.
-
-image::https://github.com/oliviercailloux/mykbd/blob/main/Elite%20K70%20French.svg[SVG keyboard]
-
-[[Visual layout PNG]]
-image::https://github.com/oliviercailloux/mykbd/blob/main/Elite.png[opts=inline]
-
-[[Visual layout]]
-image::Elite%20K70%20French.svg[opts=inline]
-
-[[Unlabeled]]
-image::https://github.com/oliviercailloux/Keyboardd/blob/main/src/test/resources/io/github/oliviercailloux/keyboardd/thekey/The%20Key.svg[opts=inline]
-
-image::https://github.com/oliviercailloux/mykbd/blob/main/Elite%20K70%20French.svg[SVG keyboard]
+image::https://github.com/oliviercailloux/mykbd/blob/main/Elite%20K70%20French.svg[opts=inline]
 
 Each key has up to eight symbols on it. Number the symbols mentally from 1 to 8, starting from the bottom left, then going top, then further right back to the bottom, and so on.
 Pressing just a key triggers the symbol number 1. Holding Shift while pressing the key adds one to the symbol number; holding AltGr adds two; holding CapsLock adds four.
