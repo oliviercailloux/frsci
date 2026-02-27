@@ -5,6 +5,7 @@ An XKB keyboard layout for people who want a French keyboard layout with supplem
 Named by reference to old discussions with a friend about the “French way” of “doing science”…
 
 == Overview
+.The resulting layout
 image::https://github.com/oliviercailloux/mykbd/blob/main/Elite%20K70%20French.svg[opts=inline]
 
 Each key has up to eight symbols on it. Number the symbols mentally from 1 to 8, starting from the bottom left, then going top, then further right back to the bottom, and so on.
