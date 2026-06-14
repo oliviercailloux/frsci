@@ -14,7 +14,7 @@ Pressing just a key triggers the symbol number 1. Holding Shift while pressing t
 Consider the W key as an example: symbols from 1 to 8 are _w_, _W_, _«_, _»_, _ω_, _Ω_, _⊀_, _⊁_.
 Thus, pressing that key alone produces _w_; holding Shift produces _W_; holding AltGr produces _«_; holding both Shift and AltGr produces _»_; holding just CapsLock produces _ω_; holding both CapsLock and Shift produces _Ω_; holding both CapsLock and AltGr produces _⊀_; holding CapsLock, Shift, and AltGr produces _⊁_.
 
-That’s because the file `symbols/frsci` in this repository registers AltGr as level3 modifier, and CapsLock as level5 modifier, you can change this.
+That’s because the file `symbols/frsci` in this repository registers AltGr as level3 modifier and CapsLock as level5 modifier (you can change this).
 
 == Install
 Here is how to install the layout system-wide.
