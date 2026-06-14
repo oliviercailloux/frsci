@@ -24,7 +24,7 @@ Here is how to install the layout system-wide.
 * Edit the name of the layout in `rules/evdev.xml` (optional but please do this if you plan to redistribute your modified layout)
 * Check that you do not have current XKB configuration files in `/etc/xkb/`
 * `sudo install -D -m "u=rwX,g=rX,o=rX" "rules/evdev.xml" "/etc/xkb/rules/evdev.xml"`
-* `sudo install -D -m "u=rwX,g=rX,o=rX" "symbols/frsci" "/etc/xkb/symbols/frsci"`
+* `sudo install -D -m "u=rwX,g=rX,o=rX" "/home/olivier/Général/Claviers/frsci/symbols/frsci" "/etc/xkb/symbols/frsci"`
 * On my system I had to reboot
 * The new layout should appear in your desktop environment keyboard settings as “French science”
 
@@ -41,6 +41,10 @@ For compatibility, I started with the standard XKB French Unicode layout (`fr(os
 
 === Other idiosyncratic choices
 The reason for the duplicate _É_ is that my keyboard refuses (by https://en.wikipedia.org/wiki/Key_rollover#Ghosting[hardware limitation]) to send a signal when pressing 2 while holding Shift and AltGr.
+
+=== Nb levels type
+I set the key for `Home` to type `ONE_LEVEL` because this is required for having Shift+Home select everything from the current point to start.
+I thought that this would be the default for a single binding but apparently it does not work like that, for some reason that escapes me.
 
 == References
 * See https://who-t.blogspot.com/2020/09/user-specific-xkb-configuration-putting.html[this nice post] for documentation (about user-specific layouts and more).
