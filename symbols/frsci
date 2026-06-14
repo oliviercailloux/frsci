@@ -49,7 +49,7 @@ xkb_symbols "basic" {
   key <AD11> { [ dead_circumflex, dead_diaeresis, dead_tilde, dead_abovering, U22A2, U22A8, U22A5, U22A4 ] };
   key <AD12> { [ dollar, sterling, oslash, Ooblique, U22AC, U22AD, U302, U2295 ] };
   key <AC11> { [ ugrave, percent, dead_acute, Ugrave, U2296, U2030, U2288, U2289 ] };
-  key <BKSL> { [ asterisk, mu, dead_grave, dead_macron, U220E, UB6 ] };
+  key <BKSL> { [ asterisk, mu, dead_grave, dead_macron, U220E, UB6, U2216 ] };
   key <LSGT> { [ less, greater, lessthanequal, greaterthanequal, U227A, U227B, U227C, U227D ] };
   key <AB07> { [ comma, question, questiondown, U2026, U2048, UB7, U2049, U2047 ] };
   key <AB08> { [ semicolon, period, multiply, U22C5, U2A2F, U2218, U220F, U2299 ] };
